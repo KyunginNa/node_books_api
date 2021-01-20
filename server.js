@@ -9,10 +9,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 
-app
-  .route('/books')
-  .get(booksController.index)
-  .post(booksController.create)
+app.route('/books').get(booksController.index).post(booksController.create)
 
 app
   .route('/books/:id')
@@ -20,7 +17,7 @@ app
   .delete(booksController.delete)
   .put(booksController.update)
 
-app.listen(3001, () => {
+app.listen(3000, () => {
   console.log('Server is up and running!')
 })
 
