@@ -18,6 +18,7 @@ app
   .route('/books/:id')
   .get(booksController.show)
   .delete(booksController.delete)
+  .put(booksController.update)
 
 app.listen(3001, () => {
   console.log('Server is up and running!')
